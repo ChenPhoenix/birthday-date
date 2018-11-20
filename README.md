@@ -21,21 +21,21 @@ npm run build --report
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 # birthday-date
 # 项目上线时，请求接口中的api要去掉，
- this.axios({
-                                method:'post',
-                                url:'/birthdayapi/insert.php',
-                                data:this.qs.stringify(
-                                    {    //这里是发送给后台的数据
-                                        nickname:this.nickname,
-                                        sex:this.sex,
-                                        type:this.type,
-                                        time:Date.parse(this.time)/1000,//生日时间
-                                        Account:this.Account,
-                                        number:this.number,
-                                        city:this.cityname,
-                                        content:this.content,
-                                        NowTime:this.NowTime/1000,
-                                        token:this.$md5((Date.parse(this.time)/1000).toString()+(this.NowTime/1000).toString()+'jsdhgsdhfgohsdoifghofdh')
+> this.axios({
+>                                method:'post',
+>                                url:'/birthdayapi/insert.php',
+>                               data:this.qs.stringify(
+>                                    {    //这里是发送给后台的数据
+>                                        nickname:this.nickname,
+>                                        sex:this.sex,
+>                                        type:this.type,
+>                                        time:Date.parse(this.time)/1000,//生日时间
+>                                        Account:this.Account,
+>                                        number:this.number,
+>                                        city:this.cityname,
+>                                        content:this.content,
+>                                        NowTime:this.NowTime/1000,
+>                                        token:this.$md5((Date.parse(this.time)/1000).toString()+(this.NowTime/1000).toString()+'jsdhgsdhfgohsdoifghofdh')
                                     }
                                 )
                             })
